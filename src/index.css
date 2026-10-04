@@ -1,0 +1,58 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: 'Manrope', sans-serif;
+  --font-family-primary: 'Manrope';
+  
+  --text-xs: 11px;
+  --text-sm: 12px;
+  --text-md: 13px;
+  --text-lg: 14px;
+  --text-xl: 15px;
+  --text-2xl: 16px;
+  --text-3xl: 18px;
+  --text-4xl: 26px;
+
+  --color-surface-base: #000000;
+  --color-text-secondary: #9a9a9a;
+  --color-border-strong: #ffffff;
+  --color-text-inverse: #282828;
+  --color-surface-raised: #15a7fd;
+  --color-surface-strong: #242424;
+
+  --spacing-1: 4px;
+  --spacing-2: 8px;
+  --spacing-3: 10px;
+  --spacing-4: 12px;
+  --spacing-5: 14px;
+  --spacing-6: 16px;
+  --spacing-7: 18px;
+  --spacing-8: 25px;
+
+  --radius-xs: 5px;
+  --radius-sm: 16px;
+  --radius-md: 25px;
+  --radius-lg: 50px;
+
+  --transition-duration-instant: 200ms;
+  --transition-duration-fast: 250ms;
+  --transition-duration-normal: 300ms;
+  --transition-duration-slow: 400ms;
+}
+
+@layer base {
+  body {
+    @apply font-sans font-normal text-[16px] leading-[26.08px];
+  }
+}
+
+@layer utilities {
+  @keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-80%); }
+  }
+  
+  .animate-marquee {
+    animation: marquee 30s linear infinite;
+  }
+}
